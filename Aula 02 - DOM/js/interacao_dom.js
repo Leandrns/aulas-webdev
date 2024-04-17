@@ -4,5 +4,30 @@ var r = document.getElementById('r');
 
 function soma(){
     var resultado = n1.valueAsNumber + n2.valueAsNumber;
-    r.textContent = resultado;
+    if (isNaN(resultado))
+        r.textContent = "Nenhum valor foi digitado."
+    else
+        r.textContent = resultado;
 }
+function subtracao(){
+    var resultado = n1.valueAsNumber - n2.valueAsNumber;
+    if (isNaN(resultado))
+        r.textContent = "Nenhum valor foi digitado."
+    else
+        r.textContent = resultado;
+}
+function multiplicacao(){
+    var resultado = n1.valueAsNumber * n2.valueAsNumber;
+    if (isNaN(resultado))
+        r.textContent = "Nenhum valor foi digitado."
+    else
+        r.textContent = resultado;
+}
+function divisao(){
+    var resultado = n1.valueAsNumber / n2.valueAsNumber;
+    if (isNaN(resultado))
+        r.textContent = "Nenhum valor foi digitado."
+    else
+        r.textContent = resultado;
+}
+
