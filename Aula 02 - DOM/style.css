@@ -26,6 +26,7 @@ button {
 }
 
 .calculadora {
+    margin-top: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
