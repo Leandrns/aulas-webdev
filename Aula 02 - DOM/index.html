@@ -9,17 +9,18 @@
 <body>
     <h1>Chegou a hora da telinha - DOM (Document Object Model)</h1>
     <h2>Oferece uma API para interagir com o documento</h2><br>
-    <h2>CALCULADORA</h2>
+    <div class="calculadora">
+        <h2>CALCULADORA</h2>
 
-    <input id="n1" type="number" placeholder="Digite um número..."><br><br>
-    <input id="n2" type="number" placeholder="Digite outro número..."> <br><br>
+        <input id="n1" type="number" placeholder="Digite um número..."><br><br>
+        <input id="n2" type="number" placeholder="Digite outro número..."> <br><br>
 
-    <button onclick="soma()">+</button>
-    <button onclick="subtracao()">-</button>
-    <button onclick="multiplicacao()">*</button>
-    <button onclick="divisao()">/</button>
-    <h2><p>O resultado é: <span id="r"></span></p></h2>
-
+        <button class="botao" onclick="soma()">+</button>
+        <button class="botao" onclick="subtracao()">-</button>
+        <button class="botao" onclick="multiplicacao()">*</button>
+        <button class="botao" onclick="divisao()">/</button>
+        <h2><p>O resultado é: <span id="r"></span></p></h2>
+    </div>
     <script src="js/interacao_dom.js"></script>
 </body>
 </html>
