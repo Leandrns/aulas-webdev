@@ -1,14 +1,16 @@
+let n1 = document.getElementById('n1');
+let n2 = document.getElementById('n2');
+let resultado = document.querySelector('section#resultado');
+
 function soma(a, b) {
-    let resultado = document.querySelector('section#resultado');
-    let r = a+b;
-    return resultado.innerHTML = `<p>${r}</p>`;
+    return resultado.innerHTML = `<p>O resultado é: ${a+b}</p>`
 }
 function subt(a, b) {
-    return a - b;
+    return resultado.innerHTML = `<p>O resultado é: ${a-b}</p>`
 }
 function mult(a, b) {
-    return a * b;
+    return resultado.innerHTML = `<p>O resultado é: ${a*b}</p>`
 }
 function div(a, b) {
-    return a / b;
+    return resultado.innerHTML = `<p>O resultado é: ${a/b}</p>`
 }
