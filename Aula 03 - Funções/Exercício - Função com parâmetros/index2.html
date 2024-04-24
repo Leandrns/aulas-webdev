@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Document</title>
 </head>
 <body>
     <h1>Calculadora</h1>
-    <input type="number"><br><br>
-    <input type="number"><br><br>
+    <input id="n1" type="number"><br><br>
+    <input id="n2" type="number"><br><br>
 
-    <button onclick="soma()">+</button>
+    <button onclick="soma(n1, n2)">+</button>
     <button onclick="subt()">-</button>
     <button onclick="mult()">*</button>
     <button onclick="div()">/</button>
+    <section id="resultado"><p>O resultado é: </p></section>
+    
 
-    <p id="resultado">O resultado é: </p>
-
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
