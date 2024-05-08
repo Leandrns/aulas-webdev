@@ -1,0 +1,15 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+#botao-iniciar {
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+}
+
+#resultado {
+    font-size: 25px;
+    font-weight: bold;
+}
