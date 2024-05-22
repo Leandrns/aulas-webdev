@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <form>
+        <h1>Cadastro do Usuário</h1>
+        <p>Login: <input type="text" maxlength="50"></p>
+        <p>Senha: <input type="password" maxlength="16"></p>
+        <p>Confirmar senha: <input type="password" maxlength="16"></p>
+        <p>Nome: <input type="text" maxlength="50"></p>
+        <p>Endereço: <input type="text" maxlength="50"></p>
+        <p>CPF: <input type="text" maxlength="11"></p>
+        <fieldset class="multiple-field">
+            <legend>Telefones</legend>
+            <div><input name="telefone"></div>
+        </fieldset>
+        <p>Email: <input type="email"></p>
+        <p>Perfil:
+            <select name="Perfil">
+                <option value="A">Prata</option>
+                <option value="B">Ouro</option>
+                <option value="C">Diamante</option>
+            </select>
+        </p>
+        <p>Voucher: <input type="text"></p>
+        <p>Observações: </p>
+        <textarea name="observacao" cols="60" rows="10"></textarea>
+        <br><br>
+        <button>Incluir</button> <button>Excluir</button>
+        <script src="script.js"></script>
+    </form>
+</body>
+</html>
