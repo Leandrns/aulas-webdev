@@ -14,3 +14,5 @@ const Input = styled.input`
         font-size: 16px;
     }
 `
+
+export default Input
