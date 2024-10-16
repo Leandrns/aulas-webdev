@@ -1,3 +1,4 @@
+import { Link as RouterLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Opcao = styled.li`
@@ -14,12 +15,23 @@ const Opcao = styled.li`
 const Opcoes = styled.ul`
     display: flex;
 `
+
+const Link = styled(RouterLink)`
+    text-decoration: none;
+    color: #000;
+    &:hover {
+        color: #007bff;
+    }
+`
+
 const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
 function OpcoesHeader() {
     return (
         <Opcoes>
-            {textoOpcoes.map( (texto) => (
-                <Opcao><p>{texto}</p></Opcao>
+            {textoOpcoes.map((texto) => (
+                <Opcao>
+                    <Link to={`/${texto.toLowerCase().replace(' ', '')}`}>{texto}</Link>
+                </Opcao>
             ))}
         </Opcoes>
     )
