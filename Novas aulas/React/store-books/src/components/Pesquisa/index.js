@@ -1,6 +1,6 @@
-import Input from '../Input'
-import styled from 'styled-components'
 import { useState } from 'react'
+import styled from 'styled-components'
+import Input from '../Input'
 import { livros } from './dadosPesquisa'
 
 const PesquisaContainer = styled.section`
@@ -10,6 +10,7 @@ const PesquisaContainer = styled.section`
    padding: 85px 0;
    height: 470px;
    width: 100%;
+   overflow-y: scroll;
 `
 const Titulo = styled.h2`
    color: #FFF;
@@ -43,35 +44,35 @@ function Pesquisa() {
     // `livrosPesquisados` vai guardar a lista de livros filtrados,
     // enquanto `setLivrosPesquisados` é a função para atualizar este estado.
     const [livrosPesquisados, setLivrosPesquisados] = useState([])
- 
+
     // Função responsável por filtrar a lista de livros com base no texto digitado
     function fazPesquisa(evento) {
         // `evento.target.value` captura o valor atual do input (o que o usuário digitou).
         const textoDigitado = evento.target.value
- 
+
         // `livros.filter()` é usado para filtrar a lista de livros.
         // Ele percorre todos os livros e retorna apenas os que têm o nome
         // que inclui o texto digitado pelo usuário.
         const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado))
- 
+
         // Atualiza o estado `livrosPesquisados` com o resultado da pesquisa.
         setLivrosPesquisados(resultadoPesquisa)
     }
-     return (
-       <PesquisaContainer>
-           <Titulo>Já sabe por onde começar?</Titulo>
-           <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
-           <Input
-               placeholder="Escreva sua próxima leitura"
-               onBlur={evento => fazPesquisa(evento)}
-           />
-           {livrosPesquisados.map( livro => (
-               <Resultado>
-                   <img src={livro.src}/>
-                   <p>{livro.nome}</p>
-               </Resultado>
-           ) ) }
-       </PesquisaContainer>
-   )
+    return (
+        <PesquisaContainer>
+            <Titulo>Já sabe por onde começar?</Titulo>
+            <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
+            <Input
+                placeholder="Escreva sua próxima leitura"
+                onBlur={evento => fazPesquisa(evento)}
+            />
+            {livrosPesquisados.map(livro => (
+                <Resultado>
+                    <img src={livro.src} />
+                    <p>{livro.nome}</p>
+                </Resultado>
+            ))}
+        </PesquisaContainer>
+    )
 }
 export default Pesquisa
